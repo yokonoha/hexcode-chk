@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>16進数カラーコード取得ツール(Hex color code checker) - Yokonoha!</title>
+  <meta charset="UTF-8">
+</head>
+<style>
+  body
+  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+  }
+  .yokonoha1
+  {
+    background-color: white;
+    border-style: dashed;
+    border-color: coral;
+    border-radius: 5px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #cselect
+  {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+  }
+    .yokonoha2
+    {
+        background-color: white;
+        border-radius: 5px;
+        padding: 20px;
+        margin-top: 20px;
+        text-align: center;
+        border-left: 15px solid #5fd84f;
+    }
+</style>
+<body>
+  <div class="yokonoha1">
+    <h2>16進数カラーコード取得ツール</h2>
+    <p>下のカラーピッカーから色を選択すると、<br>その色の16進数カラーコードが表示されます。</p>
+  <input type="color" id="cselect">
+  <h1 id="hexcode">#FFFFFF</h1>
+    
+</div>
+<div class="yokonoha2">
+  <p>Made by Y.Yokoha</p>
+    <p>More info: <a href="https://yokonoha.github.io/">Y.Yokoha's Site</a></p>
+</div>
+  <script>
+    const cselect = document.getElementById('cselect');
+    const hexcode = document.getElementById('hexcode');
+
+    cselect.addEventListener('input', function() {
+      hexcode.textContent = cselect.value.toUpperCase();
+    });
+    </script>
+</body>
+</html>
